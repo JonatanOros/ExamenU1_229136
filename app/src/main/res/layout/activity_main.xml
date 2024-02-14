@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnC" />
+
+    <TextView
+        android:id="@+id/Nombre"
+        android:layout_width="255dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="86dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginBottom="57dp"
+        android:text="Convertidor de Grados"
+        android:textAlignment="center"
+        android:textColor="#BC0D0D"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/GradosC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/GradosC"
+        android:layout_width="225dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginBottom="46dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="C"
+        app:layout_constraintBottom_toTopOf="@+id/GradosF"
+        app:layout_constraintStart_toStartOf="@+id/Nombre"
+        app:layout_constraintTop_toBottomOf="@+id/Nombre" />
+
+    <EditText
+        android:id="@+id/GradosF"
+        android:layout_width="210dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="61dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="F"
+        app:layout_constraintBottom_toTopOf="@+id/btnC"
+        app:layout_constraintStart_toStartOf="@+id/GradosC"
+        app:layout_constraintTop_toBottomOf="@+id/GradosC" />
+
+    <Button
+        android:id="@+id/btnC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginBottom="283dp"
+        android:text="°C"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toStartOf="@+id/btnF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/GradosF" />
+
+    <Button
+        android:id="@+id/btnF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="17dp"
+        android:text="°F"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnC" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
